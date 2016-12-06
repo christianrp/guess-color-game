@@ -1,0 +1,62 @@
+@import "partials/_variables";
+@import "partials/_reset";
+
+body {
+  background-color: @background-color;
+}
+
+h1 {
+  color: @second-color;
+  text-align: center;
+  background: @main-color;
+  margin: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.1;
+  padding: 20px 0;
+  #color-display {
+    font-size: 200%;
+  }
+}
+
+#stripe {
+  background-color: @second-color;
+  height: 30px;
+  text-align: center;
+  .selected {
+    background: @main-color;
+    color: @second-color;
+  }
+  button {
+    background: none;
+    border: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 700;
+    color: @main-color;
+    font-size: inherit;
+    transition: all 0.4s;
+    outline: none;
+    &:hover {
+      background-color: @main-color;
+      color: @second-color;
+    }
+  }
+  #message {
+    display: inline-block;
+    width: 20%;
+  }
+}
+
+main.container {
+  max-width: 600px;
+  margin: 20px auto;
+  .square {
+    float: right;
+    width: 30%;
+    background-color: @main-color;
+    padding-bottom: 30%;
+    margin: 1.66%;
+    transition: background 0.6s;
+  }
+}
