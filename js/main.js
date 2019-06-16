@@ -33,7 +33,7 @@ hardBtn.addEventListener('click', function() {
   pickedColor = chosenColor();
   colorDisplay.textContent = pickedColor;
   for(var i = 0; i < squares.length; i++) {
-    squares[i].style.background = colors[i];
+    squares[i].style.backgroundColor = colors[i];
     squares[i].style.display = 'block';
   }
 });
@@ -51,7 +51,7 @@ resetButton.addEventListener('click', function() {
   messageDisplay.textContent = '';
   //change colors of squares
   for(var i = 0; i < squares.length; i++) {
-    squares[i].style.background = colors[i];
+    squares[i].style.backgroundColor = colors[i];
   }
   h1.style.background = '#20A';
 })
@@ -60,12 +60,12 @@ colorDisplay.textContent = pickedColor;
 
 for(var i = 0; i < squares.length; i++) {
   //add initial colors to squares
-  squares[i].style.background = colors[i];
+  squares[i].style.backgroundColor = colors[i];
 
   //add click listeners to squares
   squares[i].addEventListener('click', function() {
     //grab color of clicked squares
-    var clickedColor = this.style.background;
+    var clickedColor = this.style.backgroundColor;
     //compare color to pickedColor
     if(clickedColor === pickedColor) {
       messageDisplay.textContent = 'Correct';
@@ -73,7 +73,7 @@ for(var i = 0; i < squares.length; i++) {
       changeColors(clickedColor);
       h1.style.background = clickedColor;
     } else {
-      this.style.background = "#232323";
+      this.style.backgroundColor = "#232323";
       messageDisplay.textContent = 'Try Again';
     }
   });
@@ -82,7 +82,7 @@ for(var i = 0; i < squares.length; i++) {
 function changeColors(color) {
   //loop through all squares
   for(var i = 0; i < squares.length; i++) {
-    squares[i].style.background = color;
+    squares[i].style.backgroundColor = color;
   }
 }
 
